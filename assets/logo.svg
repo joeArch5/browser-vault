@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="512" height="512">
+  <title>Browser Backup Manager</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172033"/><stop offset="1" stop-color="#0A0E16"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <rect x="3" y="3" width="250" height="250" rx="53" fill="none" stroke="#243047" stroke-width="2"/>
+  <path d="M195.2 81.0 A82 82 0 1 1 100.0 50.9" fill="none" stroke="url(#ring)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M93.5 33.1 L118.7 44.1 L106.5 68.8 Z" fill="#34D399" stroke="#34D399" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M110 121 V108 a18 18 0 0 1 36 0 V121" fill="none" stroke="#F3F4F6" stroke-width="10" stroke-linecap="round"/>
+  <rect x="96" y="120" width="64" height="48" rx="10" fill="#F3F4F6"/>
+  <circle cx="128" cy="138" r="6" fill="#0A0E16"/>
+  <rect x="125.5" y="140" width="5" height="14" rx="2.5" fill="#0A0E16"/>
+</svg>
