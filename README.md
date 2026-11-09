@@ -35,6 +35,39 @@
 - Works with **Brave, Google Chrome, Microsoft Edge, Vivaldi, Opera, Opera GX and Mozilla
   Firefox.**
 
+## Why I made this: privacy on a shared PC
+
+I made Browser Backup Manager for people who **share a computer** with family, roommates or
+coworkers, and want their browser to be private without having to log out of everything and log
+back in each time.
+
+**How it works**
+
+1. When you're done, **back up** your browser. Your whole profile (logins, cookies, bookmarks,
+   history, extensions) goes into **one encrypted file** that only your password can open.
+2. **Reset** the browser. It becomes a fresh install, so anyone who uses the PC after you sees an
+   empty browser: none of your accounts, history or bookmarks.
+3. When you're back, **restore** your backup. You're logged in to your accounts again, with
+   everything where you left it, without typing a single password.
+
+No cloud account is needed, nothing is uploaded, and it works fully offline. The source is open so
+you can check that.
+
+**Good to know**
+
+- While your profile is restored, it's as exposed as any normal browser. The privacy comes from
+  backing up and resetting when you leave.
+- It keeps casual users out of your data. It does **not** protect you from someone with
+  administrator access to the PC, malware, or a determined attacker. Reset deletes files
+  normally and doesn't securely erase them.
+- The backup file is encrypted, so someone who finds it can't read it, but they could delete it.
+  Keep a copy somewhere else, such as a USB stick.
+- Staying logged in depends on the websites. Some sites expire sessions or ask you to verify
+  again, and Chrome and Edge restores have extra limits (see [Limitations](#limitations)).
+- Turn browser sync off first, or it can bring your data back after a reset. See
+  [Browser sync](#browser-sync-turn-it-off-before-you-test-reset-or-restore).
+- See [SECURITY.md](SECURITY.md) for what is and isn't protected.
+
 ## Download
 
 Get `BrowserBackupManager.exe` from the [Releases](../../releases) page. It is a single
