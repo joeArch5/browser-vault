@@ -17,7 +17,7 @@
 
 > **Heads-up:** the *Reset browser* feature permanently deletes a browser's data and the app
 > force-closes browsers before it works. Read [Disclaimer](#disclaimer) and make one test backup
-> and restore before you rely on it. The optional app lock is a basic convenience lock, **not**
+> and restore before you rely on it (turn browser sync off first: see [Browser sync](#browser-sync-turn-it-off-before-you-test-reset-or-restore)). The optional app lock is a basic convenience lock, **not**
 > strong security: see [SECURITY.md](SECURITY.md).
 
 ## Features
@@ -116,6 +116,40 @@ Full threat model, known limits and how to report a vulnerability: [SECURITY.md]
 - The window cannot be closed while a backup, restore or reset is running.
 - The `.meta.json` next to each backup is **not** encrypted (browser, name, date, file count),
   and the file size is visible. Do not put secrets in a backup's name.
+
+## Browser sync: turn it off before you test, reset or restore
+
+Edge, Chrome, Brave, Firefox, Vivaldi and Opera can sync your data to a cloud account
+(bookmarks, passwords, history, extensions, settings). Sync runs by itself and it gets in the way
+of this app:
+
+- **A reset can look like it did nothing.** After a reset the browser starts like a fresh install,
+  but if you are signed in (or it signs in automatically, as Edge can with your Windows Microsoft
+  account), it downloads your data from the cloud again. Your bookmarks come back and you might
+  think the reset or the backup did not work.
+- **A test proves nothing.** If sync fills your data back in, you can't tell whether *your backup*
+  restored it. You could believe the backup works when it is broken.
+- **Sync can interfere with a restore.** Once the browser is back and online, sync may merge the
+  cloud copy with the data you restored, which can overwrite or duplicate bookmarks and
+  settings.
+
+**What to do:** before you test (and ideally before any reset or restore), turn sync off or sign
+out of the browser. Then make a unique bookmark such as "BBM TEST", back up, reset, check that it is
+gone, restore, and check that it is back. You can turn sync on again afterwards.
+
+Where to find it (menus change between versions, so search the settings for "sync" if needed):
+
+| Browser | How to turn sync off |
+|---|---|
+| **Edge** | Settings > Profiles > Sync > turn sync off (or sign out). Also decline the "sign in with your Windows account" prompt on first run. |
+| **Chrome** | Settings > You and Google > Sync and Google services > turn sync off (or sign out). |
+| **Brave** | Settings > Sync > leave the sync chain. |
+| **Firefox** | Settings > Sync > disconnect (or sign out of the Firefox account). |
+| **Vivaldi / Opera / Opera GX** | Settings > Sync > log out. |
+
+Sync is not a replacement for this app: it needs an account, it may not include everything (for
+example, some data stays local), and it can replicate a mistake to all your devices. An encrypted
+backup file is a separate copy that you control.
 
 ## Limitations
 
