@@ -68,6 +68,29 @@ you can check that.
   [Browser sync](#browser-sync-turn-it-off-before-you-test-reset-or-restore).
 - See [SECURITY.md](SECURITY.md) for what is and isn't protected.
 
+## Screenshots
+
+**Backups:** pick a backup, then restore it.
+
+<p align="center"><img src="assets/screenshots/backups.png" alt="Backups page" width="760"></p>
+
+**Create backup:** choose the browser, name it, set a password, and optionally reset the browser
+after the backup is verified.
+
+<p align="center"><img src="assets/screenshots/create-backup.png" alt="Create backup page" width="760"></p>
+
+**Reset browser:** return a browser to a fresh install.
+
+<p align="center"><img src="assets/screenshots/reset-browser.png" alt="Reset browser page" width="760"></p>
+
+**Security:** the optional app lock.
+
+<p align="center"><img src="assets/screenshots/security.png" alt="Security page" width="760"></p>
+
+**Lock screen:** shown when the app lock is on.
+
+<p align="center"><img src="assets/screenshots/lock-screen.png" alt="Lock screen" width="420"></p>
+
 ## Download
 
 Get `BrowserBackupManager.exe` from the [Releases](../../releases) page. It is a single
